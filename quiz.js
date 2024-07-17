@@ -14,7 +14,7 @@ document.getElementById('quiz-form').addEventListener('submit', async function (
         }
     });
 
-    const response = await fetch('https://your-backend-url/recommend', {
+    const response = await fetch('https://dc700d47-198c-4c75-aabd-7f487852ad5b-00-2hqe7nuysctza.janeway.replit.dev/recommend', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
