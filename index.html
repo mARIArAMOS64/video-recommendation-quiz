@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Recommendation Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-lg">
+        <h1 class="text-2xl font-bold mb-4">Video Recommendation Quiz</h1>
+        <form id="quiz-form" class="space-y-4">
+            <div>
+                <label for="age" class="block text-sm font-medium text-gray-700">What is your age?</label>
+                <input type="number" id="age" name="age" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">What are your interests?</label>
+                <div class="mt-2 space-y-2">
+                    <div>
+                        <input type="checkbox" id="interest-tech" name="interests" value="Tech">
+                        <label for="interest-tech" class="text-sm text-gray-600">Tech</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest-music" name="interests" value="Music">
+                        <label for="interest-music" class="text-sm text-gray-600">Music</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">What type of content do you feel like watching?</label>
+                <select id="content-type" name="content_type" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option value="Comedy">Comedy</option>
+                    <option value="Documentary">Documentary</option>
+                </select>
+            </div>
+            <div>
+                <label for="creators" class="block text-sm font-medium text-gray-700">Content creators you follow</label>
+                <input type="text" id="creators" name="creators" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-indigo-600 text-white p-2 rounded-md">Get Recommendation</button>
+            </div>
+        </form>
+        <div id="recommendation" class="mt-4 p-4 bg-green-100 text-green-700 rounded-md hidden">
+            <p>Your recommended video: <a href="" id="video-link" class="text-blue-600 underline"></a></p>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
